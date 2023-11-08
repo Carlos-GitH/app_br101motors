@@ -1,0 +1,47 @@
+<form [formGroup]="formAgendamento" (ngSubmit)="onSubmit()" class="form_agendamento">
+    <mat-form-field appearance="outline" class="form_field">
+      <mat-label>Moto</mat-label>
+      <input type="text" matInput id="moto" formControlName="moto">
+    </mat-form-field>
+  
+    <mat-form-field appearance="outline" class="form_field">
+        <mat-label>Choose a date</mat-label>
+        <input matInput [matDatepicker]="datepicker">
+        <mat-datepicker-toggle matIconSuffix [for]="datepicker"></mat-datepicker-toggle>
+        <mat-datepicker #datepicker>
+          <mat-datepicker-actions>
+            <button mat-button matDatepickerCancel>Cancel</button>
+            <button mat-raised-button color="primary" matDatepickerApply>Apply</button>
+          </mat-datepicker-actions>
+        </mat-datepicker>
+    </mat-form-field>
+  
+    <mat-form-field appearance="outline" class="form_field">
+      <mat-label>Serviços</mat-label>
+      <input type="text" matInput id="servicos" formControlName="servicos">
+    </mat-form-field>
+  
+    <mat-form-field appearance="outline" class="form_field">
+      <mat-label>Proprietário</mat-label>
+      <input type="text" matInput id="proprietario" formControlName="proprietario">
+    </mat-form-field>
+  
+    <mat-form-field appearance="outline" class="form_field">
+      <mat-label>Placa</mat-label>
+      <input type="text" matInput id="placa" formControlName="placa">
+    </mat-form-field>
+  
+    <mat-form-field appearance="outline" class="form_field">
+      <mat-label>Status</mat-label>
+      <mat-select id="status" formControlName="status">
+        <mat-option value="Aguardando aprovação">Aguardando aprovação</mat-option>
+        <mat-option value="Aprovado">Aprovado</mat-option>
+        <mat-option value="Em andamento">Em andamento</mat-option>
+        <mat-option value="Concluído">Concluído</mat-option>
+        <mat-option value="Cancelado">Cancelado</mat-option>
+      </mat-select>
+    </mat-form-field>
+  <br>
+    <button type="submit" mat-raised-button color="primary">Salvar</button>
+  </form>
+  

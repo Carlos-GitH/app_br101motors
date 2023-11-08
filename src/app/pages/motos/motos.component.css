@@ -1,0 +1,17 @@
+.agendamento-card {
+    max-width: 400px;
+    margin: 2em auto;
+}
+.btn_novo_agendamento {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
